@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Call for Service | SERVPRO</title>
+  <meta name="theme-color" content="#006341" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <link rel="stylesheet" href="/css/app.css" />
+</head>
+<body class="page">
+  <header class="nav liquid-glass" style="background:#006341">
+    <a class="brand" href="/"><span class="brand-mark">S</span> SERVPRO</a>
+    <nav class="nav-links"><a href="/">Home</a><a href="/services/">Services</a></nav>
+  </header>
+  <section class="section" style="padding-top:110px">
+    <h2>Call Today — 24/7 Emergency Services</h2>
+    <p>Just call SERVPRO for immediate assistance. An emergency can happen at any time, and our Customer Care Center is ready to take your call, day or night.</p>
+    <p><a class="cta" href="tel:8007378776">(800) 737-8776</a></p>
+    <form action="/book/checkout.html" method="get" style="margin-top:28px">
+      <label>Service type
+        <select name="service">
+          <option>Water Damage</option>
+          <option>Fire Damage</option>
+          <option>Mold</option>
+          <option>Storm</option>
+          <option>Construction</option>
+          <option>Specialty Cleaning</option>
+        </select>
+      </label>
+      <label>ZIP code <input name="zip" required placeholder="65802" /></label>
+      <label>Name <input name="name" required /></label>
+      <label>Phone <input name="phone" required /></label>
+      <button type="submit">Continue to request</button>
+    </form>
+  </section>
+  <footer class="footer"><p class="disclaimer">Mock request only. Independent design study, not affiliated.</p></footer>
+  <script src="/js/app.js"></script>
+</body>
+</html>
