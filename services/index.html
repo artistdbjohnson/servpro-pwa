@@ -9,37 +9,81 @@
   <meta property="og:description" content="SERVPRO offers 24/7 water damage restoration, repair, and cleanup services near you. Call today for flood recovery, water mitigation, and expert property repairs." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://servpro-pwa.vercel.app/services" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="https://servpro-pwa.vercel.app/images/water-1.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Why SERVPRO? | Cleanup and Restoration" />
+  <meta name="twitter:description" content="SERVPRO offers 24/7 water damage restoration, repair, and cleanup services near you. Call today for flood recovery, water mitigation, and expert property repairs." />
   <meta name="theme-color" content="#006341" />
+  <link rel="canonical" href="https://servpro-pwa.vercel.app/services" />
   <link rel="manifest" href="/manifest.webmanifest" />
   <link rel="stylesheet" href="/css/app.css" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('sp-theme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+        else document.documentElement.setAttribute('data-theme', window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        if (localStorage.getItem('sp-lang') === 'pt') document.documentElement.setAttribute('lang', 'pt');
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body class="page">
-  <header class="nav liquid-glass" style="background:#006341">
-    <a class="brand" href="/"><span class="brand-mark">S</span> SERVPRO</a>
-    <nav class="nav-links">
-      <a href="/">Home</a>
-      <a href="/book/">Call for Service</a>
-      <a class="cta" href="tel:8007378776">(800) 737-8776</a>
-    </nav>
+  <a class="skip" href="#main" data-i18n="nav.skip">Skip to content</a>
+  <header class="nav liquid-glass">
+    <a class="brand" href="/"><span class="brand-rule" aria-hidden="true"></span>SERVPRO</a>
+    <div class="nav-end">
+      <nav class="nav-links" id="navLinks">
+        <a href="/" data-i18n="nav.home">Home</a>
+        <a href="/services/" aria-current="page" data-i18n="nav.services">Services</a>
+        <a href="/book/" data-i18n="nav.book">Call for Service</a>
+        <a href="tel:8007378776">(800) 737-8776</a>
+        <a class="cta cta-nav" href="/book/">Call Today — 24/7 Emergency Services</a>
+        <div class="nav-tools">
+          <div class="seg" role="group" aria-label="Language">
+            <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+            <button type="button" data-set-lang="pt" aria-pressed="false">PT</button>
+          </div>
+          <div class="seg" role="group" aria-label="Theme">
+            <button type="button" data-set-theme="light" data-i18n="theme.light">Light</button>
+            <button type="button" data-set-theme="dark" data-i18n="theme.dark">Dark</button>
+          </div>
+        </div>
+      </nav>
+      <a class="cta cta-compact" href="tel:8007378776">(800) 737-8776</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="navLinks" data-i18n="nav.menu">Menu</button>
+    </div>
   </header>
-  <section class="section" style="padding-top:110px">
-    <h2>The Water Damage Restoration Process, Explained</h2>
-    <p>SERVPRO ® has the expertise and equipment to quickly restore your property to pre-water damage condition. We use a scientific approach to water removal and water cleanup that emphasizes monitoring and documenting the drying process from beginning to end.</p>
-    <div class="grid">
-      <article class="card"><h3>Inspection</h3><p>After our professionals arrive at your home, they'll thoroughly assess the water damage and help you understand its severity, any hazards that may be present, and determine what can be restored.</p></article>
-      <article class="card"><h3>Water Removal</h3><p>Service work normally begins with a thorough extraction of water. This helps prevent the spread of water in the structure and reduces drying time.</p></article>
-      <article class="card"><h3>Drying</h3><p>After the bulk of the water has been removed, our specialists use industry-leading drying equipment to remove the water you can’t see.</p></article>
+  <section class="page-hero">
+    <div class="page-hero-bg" aria-hidden="true"></div>
+    <div class="page-hero-inner">
+      <p class="eyebrow">Why SERVPRO?</p>
+      <h1>The Water Damage Restoration Process, Explained</h1>
     </div>
   </section>
-  <section class="section">
-    <h2>Fire damage reconstruction</h2>
-    <p>SERVPRO follows a seven-step fire restoration process, spanning five categories: 1) mitigation, 2) structural cleaning and damaged material removal, 3) contents cleaning, 4) specialty cleaning services, and 5) reconstruction.</p>
-    <p>1) Emergency contact. 2) Inspection and fire damage assessment. 3) Board-up and roof tarping service, if necessary. 4) Water removal and drying. 5) Smoke and soot removal from all surfaces. 6) Cleaning and sanitizing. 7) Restoration.</p>
-  </section>
+  <main class="page" id="main">
+    <section class="section">
+      <p>SERVPRO ® has the expertise and equipment to quickly restore your property to pre-water damage condition. We use a scientific approach to water removal and water cleanup that emphasizes monitoring and documenting the drying process from beginning to end.</p>
+      <div class="grid">
+        <article class="card liquid-glass"><h3>Inspection</h3><p>After our professionals arrive at your home, they'll thoroughly assess the water damage and help you understand its severity, any hazards that may be present, and determine what can be restored.</p></article>
+        <article class="card liquid-glass"><h3>Water Removal</h3><p>Service work normally begins with a thorough extraction of water. This helps prevent the spread of water in the structure and reduces drying time.</p></article>
+        <article class="card liquid-glass"><h3>Drying</h3><p>After the bulk of the water has been removed, our specialists use industry-leading drying equipment to remove the water you can’t see.</p></article>
+      </div>
+    </section>
+    <section class="section" style="padding-top:0">
+      <h2>Fire damage reconstruction</h2>
+      <p>SERVPRO follows a seven-step fire restoration process, spanning five categories: 1) mitigation, 2) structural cleaning and damaged material removal, 3) contents cleaning, 4) specialty cleaning services, and 5) reconstruction.</p>
+      <p class="prose" style="margin-top:14px">1) Emergency contact. 2) Inspection and fire damage assessment. 3) Board-up and roof tarping service, if necessary. 4) Water removal and drying. 5) Smoke and soot removal from all surfaces. 6) Cleaning and sanitizing. 7) Restoration.</p>
+    </section>
+  </main>
   <footer class="footer">
-    <p class="disclaimer">Independent design study, not affiliated with SERVPRO.</p>
+    <div>(800) 737-8776 We’re Here to Help ® 24/7</div>
+    <p class="disclaimer" data-i18n="study.short">Independent design study, not affiliated with SERVPRO.</p>
   </footer>
+  <div class="dock liquid-glass">
+    <a class="cta" href="tel:8007378776">(800) 737-8776</a>
+    <a class="btn-ghost" href="/book/">Call for Service</a>
+  </div>
   <script src="/js/app.js"></script>
 </body>
 </html>

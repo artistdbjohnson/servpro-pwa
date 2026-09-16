@@ -9,76 +9,171 @@
   <meta property="og:description" content="The best restoration company near you, SERVPRO is available 24 hours for commercial &amp; residential property emergencies like water damage, fire cleanup, mold damage &amp; more." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://servpro-pwa.vercel.app/" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="https://servpro-pwa.vercel.app/images/hero-storm.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Commercial &amp; Residential Restoration Services Near You | SERVPRO" />
   <meta name="twitter:description" content="The best restoration company near you, SERVPRO is available 24 hours for commercial &amp; residential property emergencies like water damage, fire cleanup, mold damage &amp; more." />
   <meta name="theme-color" content="#006341" />
+  <link rel="canonical" href="https://servpro-pwa.vercel.app/" />
   <link rel="manifest" href="/manifest.webmanifest" />
   <link rel="apple-touch-icon" href="/icons/icon-192.svg" />
   <link rel="stylesheet" href="/css/app.css" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('sp-theme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+        else document.documentElement.setAttribute('data-theme', window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        if (localStorage.getItem('sp-lang') === 'pt') document.documentElement.setAttribute('lang', 'pt');
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
+  <a class="skip" href="#main" data-i18n="nav.skip">Skip to content</a>
   <header class="nav liquid-glass">
-    <a class="brand" href="/"><span class="brand-mark">S</span> SERVPRO</a>
-    <nav class="nav-links">
-      <a href="/services/">Services</a>
-      <a href="/book/">Call for Service</a>
-      <a href="tel:8007378776">(800) 737-8776</a>
-      <a class="cta" href="/book/">Call Today — 24/7 Emergency Services</a>
-    </nav>
+    <a class="brand" href="/"><span class="brand-rule" aria-hidden="true"></span>SERVPRO</a>
+    <div class="nav-end">
+      <nav class="nav-links" id="navLinks">
+        <a href="/" aria-current="page" data-i18n="nav.home">Home</a>
+        <a href="/services/" data-i18n="nav.services">Services</a>
+        <a href="/book/" data-i18n="nav.book">Call for Service</a>
+        <a href="tel:8007378776">(800) 737-8776</a>
+        <a class="cta cta-nav" href="/book/">Call Today — 24/7 Emergency Services</a>
+        <div class="nav-tools">
+          <div class="seg" role="group" aria-label="Language">
+            <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+            <button type="button" data-set-lang="pt" aria-pressed="false">PT</button>
+          </div>
+          <div class="seg" role="group" aria-label="Theme">
+            <button type="button" data-set-theme="light" data-i18n="theme.light">Light</button>
+            <button type="button" data-set-theme="dark" data-i18n="theme.dark">Dark</button>
+          </div>
+        </div>
+      </nav>
+      <a class="cta cta-compact" href="tel:8007378776">(800) 737-8776</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="navLinks" data-i18n="nav.menu">Menu</button>
+    </div>
   </header>
   <section class="hero">
-    <div id="heroBg" class="hero-fallback" aria-hidden="true"></div>
+    <div id="heroBg" class="hero-photo" aria-hidden="true"></div>
+    <div class="hero-grade" aria-hidden="true"></div>
+    <div class="hero-grain" aria-hidden="true"></div>
     <div class="hero-overlay"></div>
     <div class="hero-inner">
-      <div class="eyebrow">Here to Help ® 24/7</div>
+      <p class="eyebrow">Here to Help ® 24/7</p>
       <h1>The #1 Choice in Cleanup and Restoration</h1>
       <p class="lede">Cleaning. Restoration. Construction. Faster to any size disaster™</p>
       <div class="hero-actions">
         <a class="cta" href="/book/">Call for Service</a>
         <a class="btn-ghost" href="/services/">Why SERVPRO?</a>
       </div>
+      <ul class="trust-row">
+        <li class="liquid-glass"><b>Available 24/7</b><span>We’re ready whenever disaster strikes, day or night.</span></li>
+        <li class="liquid-glass"><b>59+ Years of Experience</b><span>Delivering trusted restoration services since 1967.</span></li>
+        <li class="liquid-glass"><b>IICRC Certified</b><span>Superior results from industry-leading standards.</span></li>
+      </ul>
     </div>
   </section>
-  <main class="page">
+  <main class="page" id="main">
     <section class="section">
       <h2>WHY CHOOSE SERVPRO ® ?</h2>
       <p>We’ve earned the reputation as #1 in the cleanup and restoration industry with a location near you and specialize in fire and water damage, specialty cleaning, mold, and so much more.</p>
-      <div class="stats" style="margin-top:28px">
-        <div class="stat"><b>170K+</b> Consumer Reviews</div>
-        <div class="stat"><b>24/7</b> Emergency Response</div>
-        <div class="stat"><b>59+</b> Years of Restoration Experience</div>
-        <div class="stat"><b>100%</b> IICRC Certified</div>
+      <div class="stats">
+        <div class="stat liquid-glass"><b>170K+</b><span>Consumer Reviews</span></div>
+        <div class="stat liquid-glass"><b>24/7</b><span>Emergency Response</span></div>
+        <div class="stat liquid-glass"><b>59+</b><span>Years of Restoration Experience</span></div>
+        <div class="stat liquid-glass"><b>100%</b><span>IICRC Certified</span></div>
       </div>
     </section>
     <section class="section" style="padding-top:0">
+      <p class="kicker">Services</p>
       <h2>Faster to any Size Disaster™</h2>
       <p>We have more than 2360 locations nationwide serving 97% of all US zip codes within two hours. Available 24/7. Highly trained professionals with more than 50 years of experience.</p>
       <div class="grid">
-        <article class="card"><h3>Water Damage</h3><p>Rapid extraction, drying, and restoration for floods, leaks, and burst pipes.</p></article>
-        <article class="card"><h3>Fire Damage</h3><p>Complete smoke and soot removal, odor control, and structural restoration after fire emergencies.</p></article>
-        <article class="card"><h3>Mold</h3><p>Professional inspection, containment, and safe removal of mold to protect your property and health.</p></article>
-        <article class="card"><h3>Storm</h3><p>Emergency response for severe weather events: boarding up, tarping, debris removal, and other services.</p></article>
-        <article class="card"><h3>Construction</h3><p>Full-service reconstruction and rebuilding to restore your property to its pre-loss condition.</p></article>
-        <article class="card"><h3>Specialty Cleaning</h3><p>Deep cleaning for air ducts and HVAC systems, biohazard, odor removal, graffiti cleanup, and much more.</p></article>
-        <article class="card"><h3>General Cleaning</h3><p>Heavy duty cleaning services for carpets, drapery, upholstery, and hardwood floors.</p></article>
-        <article class="card"><h3>Commercial</h3><p>Recovery and regular maintenance cleaning to keep your business running smoothly.</p></article>
+        <article class="card liquid-glass">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14c3-6 13-6 16 0"/><path d="M3 17h18"/><path d="M8 17v3M16 17v3"/></svg>
+          <h3>Water Damage</h3>
+          <p>Rapid extraction, drying, and restoration for floods, leaks, and burst pipes.</p>
+        </article>
+        <article class="card liquid-glass">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3c2 4-1 6 1 9 0 3-2 5-5 5 3 4 9 2 9-3 0-5-3-7-5-11z"/></svg>
+          <h3>Fire Damage</h3>
+          <p>Complete smoke and soot removal, odor control, and structural restoration after fire emergencies.</p>
+        </article>
+        <article class="card liquid-glass">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 14c0-3 2-5 4-8 2 3 4 5 4 8a4 4 0 1 1-8 0z"/></svg>
+          <h3>Mold</h3>
+          <p>Professional inspection, containment, and safe removal of mold to protect your property and health.</p>
+        </article>
+        <article class="card liquid-glass">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 16l4-8 4 5 3-4 5 7H4z"/></svg>
+          <h3>Storm</h3>
+          <p>Emergency response for severe weather events: boarding up, tarping, debris removal, and other services.</p>
+        </article>
+        <article class="card liquid-glass">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10l8-6 8 6v10H4z"/><path d="M10 20v-6h4v6"/></svg>
+          <h3>Construction</h3>
+          <p>Full-service reconstruction and rebuilding to restore your property to its pre-loss condition.</p>
+        </article>
+        <article class="card liquid-glass">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 18h14"/><path d="M7 18V8h10v10"/><path d="M9 11h6"/></svg>
+          <h3>Specialty Cleaning</h3>
+          <p>Deep cleaning for air ducts and HVAC systems, biohazard, odor removal, graffiti cleanup, and much more.</p>
+        </article>
+        <article class="card liquid-glass">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17h16"/><path d="M6 17l2-8h8l2 8"/><path d="M9 9V6h6v3"/></svg>
+          <h3>General Cleaning</h3>
+          <p>Heavy duty cleaning services for carpets, drapery, upholstery, and hardwood floors.</p>
+        </article>
+        <article class="card liquid-glass">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18V8h6v10H4z"/><path d="M10 18V5h10v13"/><path d="M13 9h4M13 12h4"/></svg>
+          <h3>Commercial</h3>
+          <p>Recovery and regular maintenance cleaning to keep your business running smoothly.</p>
+        </article>
       </div>
     </section>
     <section class="section">
       <h2>Property Restoration Specializing in Your Industry</h2>
       <p>When an accident happens or disaster strikes, our uniquely trained teams work with you to repair and restore your business as quickly as possible. We offer flexible repair and cleaning solutions that isolate the damaged area so normal operations can continue.</p>
-      <p style="margin-top:16px">Education · Government · Medical · Hospitality · Restaurant · Retail · Property Management · Manufacturing · Technology · Entertainment · Religion</p>
+      <ul class="chips">
+        <li class="liquid-glass">Education</li>
+        <li class="liquid-glass">Government</li>
+        <li class="liquid-glass">Medical</li>
+        <li class="liquid-glass">Hospitality</li>
+        <li class="liquid-glass">Restaurant</li>
+        <li class="liquid-glass">Retail</li>
+        <li class="liquid-glass">Property Management</li>
+        <li class="liquid-glass">Manufacturing</li>
+        <li class="liquid-glass">Technology</li>
+        <li class="liquid-glass">Entertainment</li>
+        <li class="liquid-glass">Religion</li>
+      </ul>
     </section>
     <section class="section">
-      <h2>SERVPRO Helps with the Insurance Claim Process</h2>
-      <p>At SERVPRO, we understand that property damage can be overwhelming. With decades of experience, SERVPRO can help document damage and provide information related to the services performed that can assist customers during the insurance claim process. When property damage occurs, a rapid response can help limit further damage and may reduce overall restoration costs.</p>
+      <div class="split">
+        <div>
+          <p class="kicker">Insurance</p>
+          <h2>SERVPRO Helps with the Insurance Claim Process</h2>
+          <p>At SERVPRO, we understand that property damage can be overwhelming. With decades of experience, SERVPRO can help document damage and provide information related to the services performed that can assist customers during the insurance claim process. When property damage occurs, a rapid response can help limit further damage and may reduce overall restoration costs.</p>
+        </div>
+        <aside class="panel liquid-glass">
+          <p class="kicker">Call for Service</p>
+          <p>Call Today — 24/7 Emergency Services</p>
+          <p style="margin-top:10px">Just call SERVPRO for immediate assistance. An emergency can happen at any time, and our Customer Care Center is ready to take your call, day or night.</p>
+          <a class="cta" href="/book/">Call for Service</a>
+        </aside>
+      </div>
     </section>
   </main>
   <footer class="footer">
     <div>(800) 737-8776 We’re Here to Help ® 24/7</div>
-    <p class="disclaimer">Independent design study, not affiliated with SERVPRO or The ServiceMaster Company. Exact marketing copy and green palette used for a Motionsites wanderful-hero craft study only. Chrome can install this PWA from the address bar.</p>
+    <p class="disclaimer" data-i18n="study.disclaimer">Independent design study, not affiliated with SERVPRO or The ServiceMaster Company. Exact marketing copy and green palette used for a Motionsites wanderful-hero craft study only. Chrome can install this PWA from the address bar.</p>
   </footer>
+  <div class="dock liquid-glass">
+    <a class="cta" href="tel:8007378776">(800) 737-8776</a>
+    <a class="btn-ghost" href="/book/">Call for Service</a>
+  </div>
   <script src="/js/app.js"></script>
 </body>
 </html>
