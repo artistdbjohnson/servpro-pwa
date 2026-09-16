@@ -9,19 +9,68 @@
   <meta property="og:description" content="Like it never even happened.®" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://servpro-pwa.vercel.app/book/success" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="https://servpro-pwa.vercel.app/images/house.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Request received | SERVPRO" />
+  <meta name="twitter:description" content="Like it never even happened.®" />
   <meta name="theme-color" content="#006341" />
+  <link rel="canonical" href="https://servpro-pwa.vercel.app/book/success" />
   <link rel="manifest" href="/manifest.webmanifest" />
   <link rel="stylesheet" href="/css/app.css" />
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('sp-theme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+        else document.documentElement.setAttribute('data-theme', window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        if (localStorage.getItem('sp-lang') === 'pt') document.documentElement.setAttribute('lang', 'pt');
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body class="page">
-  <header class="nav liquid-glass" style="background:#006341">
-    <a class="brand" href="/"><span class="brand-mark">S</span> SERVPRO</a>
+  <a class="skip" href="#main" data-i18n="nav.skip">Skip to content</a>
+  <header class="nav liquid-glass">
+    <a class="brand" href="/"><span class="brand-rule" aria-hidden="true"></span>SERVPRO</a>
+    <div class="nav-end">
+      <nav class="nav-links" id="navLinks">
+        <a href="/" data-i18n="nav.home">Home</a>
+        <a href="/services/" data-i18n="nav.services">Services</a>
+        <a href="/book/" data-i18n="nav.book">Call for Service</a>
+        <a href="tel:8007378776">(800) 737-8776</a>
+        <div class="nav-tools">
+          <div class="seg" role="group" aria-label="Language">
+            <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+            <button type="button" data-set-lang="pt" aria-pressed="false">PT</button>
+          </div>
+          <div class="seg" role="group" aria-label="Theme">
+            <button type="button" data-set-theme="light" data-i18n="theme.light">Light</button>
+            <button type="button" data-set-theme="dark" data-i18n="theme.dark">Dark</button>
+          </div>
+        </div>
+      </nav>
+      <a class="cta cta-compact" href="tel:8007378776">(800) 737-8776</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="navLinks" data-i18n="nav.menu">Menu</button>
+    </div>
   </header>
-  <section class="section" style="padding-top:110px">
-    <h2>Like it never even happened.®</h2>
-    <p>Your mock dispatch request was received. A local franchise would call you next. No payment was charged.</p>
-    <p><a class="cta" href="/">Back home</a></p>
+  <section class="page-hero">
+    <div class="page-hero-bg restored" aria-hidden="true"></div>
+    <div class="page-hero-inner">
+      <p class="eyebrow">Here to Help ® 24/7</p>
+      <h1>Like it never even happened.®</h1>
+    </div>
   </section>
+  <main class="page" id="main">
+    <section class="section">
+      <div class="panel liquid-glass">
+        <p data-i18n="study.success">Your mock dispatch request was received. A local franchise would call you next. No payment was charged.</p>
+        <p style="margin-top:16px"><a class="cta" href="/" data-i18n="success.back">Back home</a></p>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <p class="disclaimer" data-i18n="study.short">Independent design study, not affiliated with SERVPRO.</p>
+  </footer>
+  <script src="/js/app.js"></script>
 </body>
 </html>
