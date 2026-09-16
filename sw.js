@@ -1,4 +1,4 @@
-const CACHE = 'servpro-study-v1';
+const CACHE = 'servpro-study-v2';
 const SHELL = ['/', '/index.html', '/css/app.css', '/js/app.js', '/manifest.webmanifest', '/services/index.html', '/book/index.html', '/book/checkout.html', '/book/success.html'];
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(SHELL).catch(() => {})));
