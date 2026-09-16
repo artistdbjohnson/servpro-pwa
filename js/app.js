@@ -2,7 +2,6 @@
   const bg = document.getElementById('heroBg');
   if (bg) {
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const finePointer = window.matchMedia('(pointer: fine)');
     const hero = bg.closest('.hero') || bg;
 
     let cx = window.innerWidth / 2;
@@ -18,7 +17,7 @@
     let listening = false;
 
     function motionAllowed() {
-      return !reduceMotion.matches && tabVisible && onscreen && finePointer.matches;
+      return !reduceMotion.matches && tabVisible && onscreen;
     }
 
     function apply(px, py) {
@@ -97,7 +96,7 @@
     }
 
     function syncMotionPreference() {
-      if (reduceMotion.matches || !finePointer.matches) {
+      if (reduceMotion.matches) {
         unbindMove();
         stopLoop();
         tx = 0;
@@ -118,7 +117,6 @@
     window.addEventListener('resize', onResize, { passive: true });
     document.addEventListener('visibilitychange', onVisibility);
     onMq(reduceMotion, syncMotionPreference);
-    onMq(finePointer, syncMotionPreference);
 
     if ('IntersectionObserver' in window) {
       const io = new IntersectionObserver(function (entries) {
