@@ -63,22 +63,28 @@ button, input, select { font: inherit; }
 }
 .skip:focus { top: 12px; }
 
-/* Liquid glass — frost, hairline, inner light, depth */
+/* Matte plates. Replaces the shared September PWA frost
+   (blur 18px, saturate 1.45, luminosity) so cards are solid. */
 .liquid-glass {
-  background: var(--glass);
-  background-blend-mode: luminosity;
-  backdrop-filter: blur(18px) saturate(1.45);
-  -webkit-backdrop-filter: blur(18px) saturate(1.45);
-  border: 1px solid var(--glass-border);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.42),
-    0 12px 36px rgba(4, 16, 10, 0.1);
+  background: #fff;
+  border: 1px solid var(--line);
+  box-shadow: none;
+}
+html[data-theme="dark"] .liquid-glass {
+  background: #12201a;
 }
 
-.nav.liquid-glass {
-  --glass: rgba(8, 16, 12, 0.42);
-  --glass-border: rgba(255, 255, 255, 0.16);
+.nav.liquid-glass,
+html[data-theme] .nav.liquid-glass {
+  background: #06281b;
+  border-color: rgba(255, 255, 255, 0.16);
   color: #fff;
+}
+
+.trust-row .liquid-glass,
+html[data-theme] .trust-row .liquid-glass {
+  background: rgba(3, 20, 14, 0.92);
+  border-color: rgba(255, 255, 255, 0.18);
 }
 
 .nav {
@@ -361,7 +367,7 @@ h1 {
 html[data-theme="light"] .card,
 html[data-theme="light"] .stat,
 html[data-theme="light"] .panel {
-  background: rgba(255, 255, 255, 0.5);
+  background: #fff;
 }
 .card:hover { transform: translateY(-2px); }
 .card svg {
@@ -491,9 +497,10 @@ input, select, textarea {
 .dock {
   display: none;
 }
-.dock.liquid-glass {
-  --glass: rgba(8, 16, 12, 0.58);
-  --glass-border: rgba(255, 255, 255, 0.16);
+.dock.liquid-glass,
+html[data-theme] .dock.liquid-glass {
+  background: #06281b;
+  border-color: rgba(255, 255, 255, 0.16);
 }
 
 .band {
@@ -537,10 +544,8 @@ html[data-theme="dark"] .band::before {
     flex-direction: column;
     align-items: stretch;
     gap: 12px;
-    background: rgba(8, 16, 12, 0.78);
+    background: #06281b;
     border: 1px solid rgba(255, 255, 255, 0.14);
-    backdrop-filter: blur(18px) saturate(1.4);
-    -webkit-backdrop-filter: blur(18px) saturate(1.4);
   }
   .nav-links.is-open { display: flex; }
   .nav-tools { justify-content: space-between; }
